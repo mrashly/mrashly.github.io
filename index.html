@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> [develop]Регистрация </title>
+    <meta charset="utf-8">
+    <meta name="author" content="cry.Ashly">
+    <meta name="description" content="Тестовая страничка">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <form action='reg_script.js' method="post">
+      <p><h2>Регистрация</h2></p>
+      <p>Ваше имя:</p>
+      <p><input type="text" name="name" value="Ваше имя" /></p>
+      <p>Ваш пол:</p>
+      <select name="floor" id="floor">
+        <option value="select">Выбор</option>
+        <option value="men">Мен</option>
+        <option value="wumen">ВуМен</option>
+        <option value="menwumen">Не бинарный</option>
+      </select>
+      <p>Пароль:</p>
+      <p><input type="password" name="pass"/>
+      <p>Повторите пароль:</p>
+      <p><input type="password" name="pass2"/></p>
+      <input type="reset" />
+    </form>
+    <form action="second.html" target="_blank">
+      <button>Подтвердить</button>
+    </form>
+  </body>
+</html>

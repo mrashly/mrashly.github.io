@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> [develop]Плеер </title>
+    <meta charset="utf-8">
+    <meta name="author" content="cry.Ashly">
+    <meta name="description" content="Тестовая страничка">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+
+  </head>
+  <body>
+
+    <audio id="aud2">
+        <source src="audio/anna-asti-carica.mp3" type="audio/mp3">
+    </audio>
+    <audio id="aud3">
+        <source src="audio/INSTASAMKA.mp3" type="audio/mp3">
+    </audio>
+    <audio id="aud4">
+      <source src="audio/moya-mishel-zima-v-serdce-mp3.mp3">
+    </audio>
+    <audio id="aud5">
+      <source src="https://uzmus.net/uploads/music/2023/12/morgenshtern-den-h-mp3.mp3">
+    </audio>
+
+    <h1> Музычка </h1>
+    <img style="display: none;" id="gui" src="evangelion-mari.gif" width="170" height="110" alt="PNG" />
+
+    <form action='player' method="post">
+      <p>Выбор трека</p>
+      <select name="audiolist" id="audiolist">
+        <option value="stop">Стопэ</option>
+        <option value="zima">Зима</option>
+        <option value="insta">Инстасамка</option>
+        <option value="carica">Царица</option>
+        <option value="morgen">Морген</option>
+      </select>
+    </form>
+
+    <script type="text/javascript">
+    $("#audiolist").change(function ()
+    {
+      if (this.value == "carica"){
+        $("audio").trigger('pause');
+        $('#aud2')[0].play();
+      }
+      if (this.value == "insta"){
+        $("audio").trigger('pause');
+        $('#aud3')[0].play();
+      }
+      if (this.value == "zima"){
+        $("audio").trigger('pause');
+        $('#aud4')[0].play();
+      }
+      if (this.value == "stop"){
+        $("audio").trigger('pause');
+      }
+      if (this.value == "morgen"){
+        $("audio").trigger('pause');
+        $('#aud5')[0].play();
+      }
+    });
+
+    </script>
+  </body>
+</html>
