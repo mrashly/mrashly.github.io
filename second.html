@@ -28,7 +28,7 @@
     <img style="display: none;" id="gui" src="evangelion-mari.gif" width="170" height="110" alt="PNG" />
 
     <form action='player' method="post">
-      <p>Выбор трека</p>
+      <p>Выбор трека:</p>
       <select name="audiolist" id="audiolist">
         <option value="stop">Стопэ</option>
         <option value="zima">Зима</option>
@@ -41,20 +41,20 @@
     <script type="text/javascript">
     $("#audiolist").change(function ()
     {
-      if (this.value == "carica"){
+      if (this.value == "stop"){
         $("audio").trigger('pause');
-        $('#aud2')[0].play();
-      }
-      if (this.value == "insta"){
-        $("audio").trigger('pause');
-        $('#aud3')[0].play();
       }
       if (this.value == "zima"){
         $("audio").trigger('pause');
         $('#aud4')[0].play();
       }
-      if (this.value == "stop"){
+      if (this.value == "insta"){
         $("audio").trigger('pause');
+        $('#aud3')[0].play();
+      }
+      if (this.value == "carica"){
+        $("audio").trigger('pause');
+        $('#aud2')[0].play();
       }
       if (this.value == "morgen"){
         $("audio").trigger('pause');
@@ -63,5 +63,11 @@
     });
 
     </script>
+    <a>или
+    <form action="wheel.html" target="_blank">
+      <button>Рандом</button>
+    </form>
+  </a>
+
   </body>
 </html>
